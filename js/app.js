@@ -2,8 +2,9 @@ var cards = [1,2,3,4,5,6,7,8,9,10,11,12,1,2,3,4,5,6,7,8,9,10,11,12];
 var player1 = [];
 var player2= [];
 var turn = true;
-var playerTurn = $('.playerTurn');
-var gameStart = function(){
+var playerTurn = $('#pturn');
+
+ function gameStart(){
 	function shuffle(hand) {
 		for (var i=hand.length-1; i>0; i--) {
 			var j = Math.floor(Math.random()*(i + 1));
@@ -13,13 +14,11 @@ var gameStart = function(){
 		}
 		return hand;
 	}
-
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
 		items += '<li class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">'+ board[i] +'</li>'
 	}
-
 	$('#board').html(items);
 	$('.card').on('click', turnCard);
 	console.log(shuffle(cards));
@@ -29,6 +28,9 @@ function turnCard(){
 	$(this).addClass('active');
 	if($('.active').length %2 === 0){
 		getPair();
+	}
+	else if($('.active').length == 24){
+		getWinner();
 	}
 	else{
 		alert("turn another card")
@@ -40,30 +42,48 @@ function getPair(){
 		alert("Match found")
 		if (turn == true){
 			player1.length++;
-			$('P1score').html('player 1' + " " + player1.length)
+			$('P1score').html('player 1' + " " +player1.length)
+			
 		}
 		else
 		{
 			player2.length++;
-			$('.P2score').html('player 2' + " " +player2.length)
+			$('P2score').html('player 2' + " " +player2.length)
 		}
 	}
+
+
 	else{
 		alert('match not found')
 		if(turn == true){
-			$('.card').removeClass('active')
-			playerTurn.html('Player 1 Turn')
+			$('.card').removeClass('active');
+			$('#pturn').html('Player 1 Turn');
 			turn=false;
 		}
 		else{
-			playerTurn.html('Player 2 Turn')
-		$('.card').removeClass('active')
+			$('#pturn').html('Player 2 Turn');
+		$('.card').removeClass('active');
 		turn = true;
 }
 	}
 }
+
+function getWinner(){
+if (player1.length > player2.length){
+alert("player1 Wins")
+}
+else if(player1.length == player2.length){
+	alert("it's a tie");
+}
+else{
+	alert("player 2 wins")
+}
+}
+
 $(document).ready(function(){
+	var playerTurn = $('#pturn');
 	$('#newGame').on('click', function(){
+		playerTurn.html('Player 1 Turn');
 		gameStart()
 
 	})
