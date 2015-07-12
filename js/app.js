@@ -2,9 +2,9 @@ var cards = [1,2,3,4,5,6,7,8,9,10,11,12,1,2,3,4,5,6,7,8,9,10,11,12];
 var player1 = [];
 var player2= [];
 var turn = true;
-var playerTurn = $('#pturn');
+var playerTurn = $('#display');
 
- function gameStart(){
+function gameStart(){
 	function shuffle(hand) {
 		for (var i=hand.length-1; i>0; i--) {
 			var j = Math.floor(Math.random()*(i + 1));
@@ -29,26 +29,32 @@ function turnCard(){
 	if($('.active').length %2 === 0){
 		getPair();
 	}
-	else if($('.active').length == 24){
+	else if(player1.length + player2.length === 24){
 		getWinner();
 	}
 	else{
 		alert("turn another card")
-			}
+	}
 }
 
 function getPair(){
-	if($('.active:eq(0)').attr('data-card') === $('.active:eq(1)').attr('data-card')){
+	if($('.active:eq(0)').attr('data-card') == $('.active:eq(1)').attr('data-card')){
 		alert("Match found")
+		
+		
 		if (turn == true){
 			player1.length++;
-			$('P1score').html('player 1' + " " +player1.length)
-			
+			$('.p1score').html('player 1' + " " +player1.length);
+			$('.active').addClass('p1-pair').off('click');
+			$('.card').removeClass('active');
+
 		}
 		else
 		{
 			player2.length++;
-			$('P2score').html('player 2' + " " +player2.length)
+			$('.p2score').html('player 2' + " " +player2.length);
+			$('.active').addClass('p2-pair').off('click');
+			$('.card').removeClass('active');
 		}
 	}
 
@@ -57,34 +63,36 @@ function getPair(){
 		alert('match not found')
 		if(turn == true){
 			$('.card').removeClass('active');
-			$('#pturn').html('Player 1 Turn');
+			$('#display').html('Player 1 Turn');
 			turn=false;
 		}
 		else{
-			$('#pturn').html('Player 2 Turn');
-		$('.card').removeClass('active');
-		turn = true;
-}
+			$('#display').html('Player 2 Turn');
+			$('.card').removeClass('active');
+			turn = true;
+		}
 	}
 }
 
 function getWinner(){
-if (player1.length > player2.length){
-alert("player1 Wins")
-}
-else if(player1.length == player2.length){
-	alert("it's a tie");
-}
-else{
-	alert("player 2 wins")
-}
+	if (player1.length > player2.length){
+		$('#display').html("player1 Wins")
+
+	}
+	else if(player1.length == player2.length){
+		$('#display').html("it's a tie");
+	}
+	else{
+		$('#display').html("player 2 wins");
+	}
 }
 
 $(document).ready(function(){
-	var playerTurn = $('#pturn');
+	var playerTurn = $('#display');
 	$('#newGame').on('click', function(){
 		playerTurn.html('Player 1 Turn');
 		gameStart()
+		turn=true;
 
 	})
 });

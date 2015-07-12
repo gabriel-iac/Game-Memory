@@ -1,0 +1,20 @@
+ul{
+	list-style: none;
+
+}
+li{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	border:1px solid #f2f2f2;
+	background-color: #ccc;
+}
+.active{
+	background-color: blue;
+}
+.p1-pair{
+	background-color: #ff0000;
+}
+.p2-pair{
+	background-color: green;
+}
