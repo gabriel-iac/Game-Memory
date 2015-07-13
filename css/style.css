@@ -11,7 +11,9 @@ li{
 	height: auto;
 	margin: 0 auto;
 }
-
+body{
+	
+}
 
 
 .scoreboard{
@@ -99,8 +101,6 @@ ul li.flip-container.p2-pair{
 	height: 210px;
 	display: inline-block;
 	float: left;
-	
-	
 }
 
 /* flip speed goes here */
@@ -117,11 +117,13 @@ ul li.flip-container.p2-pair{
 	top: 0;
 	left: 0;
 }
-
+.flip-container:hover, .card:hover{
+	cursor: url('http://vast-oasis-8333.herokuapp.com/images/cursor.gif');
+}
 /* front pane, placed above back */
 .front {
 	z-index: 2;
-	background:url('http://vast-oasis-8333.herokuapp.com/images//card.png') no-repeat 0 0 / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/card.png') no-repeat 0 0 / cover;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
 	

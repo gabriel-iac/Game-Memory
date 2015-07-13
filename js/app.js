@@ -38,9 +38,13 @@ function turnCard(){
 	$(this).addClass('active flipped');
 
 	if($('.active').length %2 === 0){
+		setTimeout(function () {
 		getPair();
+	}, 2000)
 	} else if(player1.length + player2.length === 24){
+		setTimeout(function () {
 		getWinner(); 
+	}, 2000);
 	} else{
 		// alert("turn another card")
 	}
@@ -48,7 +52,7 @@ function turnCard(){
 
 function getPair(){
 	if($('.active:eq(0)').attr('data-card') == $('.active:eq(1)').attr('data-card')){
-		alert("Match found")
+		// alert("Match found")
 		if (turn == true) {
 			player1.length++;
 			$('.p1score').html("<p class='score'>" + 'Player 1 pairs found' + "</p>" + " " +'<h2>' + player1.length + '</h2>');
