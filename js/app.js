@@ -3,7 +3,7 @@ var player1 = [];
 var player2= [];
 var turn = true;
 var playerTurn = $('#display');
-
+//function to shuffle cards and create the board
 function gameStart(){
 	function shuffle(hand) {
 		for (var i=hand.length-1; i>0; i--) {
@@ -12,18 +12,22 @@ function gameStart(){
 			hand[i] = hand[j];
 			hand[j] = t;
 		}
+
 		return hand;
 	}
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
-		items += '<li class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">'+ board[i] +'</li>'
+		items +=  '<li class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ '<div class=class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '</div>' +'</div>'+ '</li>';
 	}
+
 	$('#board').html(items);
 	$('.card').on('click', turnCard);
 	console.log(shuffle(cards));
+	player1=[];
+	player2=[];
 }
-
+//function to turn cards during turn or return the winner.
 function turnCard(){
 	$(this).addClass('active');
 	if($('.active').length %2 === 0){
@@ -40,8 +44,6 @@ function turnCard(){
 function getPair(){
 	if($('.active:eq(0)').attr('data-card') == $('.active:eq(1)').attr('data-card')){
 		alert("Match found")
-		
-		
 		if (turn == true){
 			player1.length++;
 			$('.p1score').html('player 1' + " " +player1.length);
@@ -57,8 +59,6 @@ function getPair(){
 			$('.card').removeClass('active');
 		}
 	}
-
-
 	else{
 		alert('match not found')
 		if(turn == true){
@@ -73,7 +73,7 @@ function getPair(){
 		}
 	}
 }
-
+//compare the arrays of the player to see who win
 function getWinner(){
 	if (player1.length > player2.length){
 		$('#display').html("player1 Wins")
@@ -86,11 +86,12 @@ function getWinner(){
 		$('#display').html("player 2 wins");
 	}
 }
-
+//
 $(document).ready(function(){
 	var playerTurn = $('#display');
 	$('#newGame').on('click', function(){
 		playerTurn.html('Player 1 Turn');
+
 		gameStart()
 		turn=true;
 
