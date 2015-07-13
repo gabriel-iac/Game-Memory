@@ -60,7 +60,7 @@ function getPair(){
 		}
 	} else{
 		// alert('match not found')
-		$('.active').removeClass('flipped');
+		
 		if(turn) {
 			display.html('Player 2 Turn');
 			turn = false;
@@ -68,6 +68,7 @@ function getPair(){
 			display.html('Player 1 Turn');
 			turn = true;
 		}
+		$('.active').removeClass('flipped');
 	}
 	$('.flip-container').removeClass('active');
 }
