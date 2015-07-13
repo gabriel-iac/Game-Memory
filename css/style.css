@@ -121,7 +121,7 @@ ul li.flip-container.p2-pair{
 /* front pane, placed above back */
 .front {
 	z-index: 2;
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/card.png') no-repeat 0 0 / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images//card.png') no-repeat 0 0 / cover;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
 	
@@ -138,38 +138,38 @@ ul li.flip-container.p2-pair{
 
 /*Cards Background*/
 .card-1{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cat.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/cat.gif') no-repeat center center / cover;
 } 
 .card-2{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cats.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/cats.gif') no-repeat center center / cover;
 } 
 .card-3{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/200.gif') no-repeat center center/ cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/200.gif') no-repeat center center/ cover;
 } 
 .card-4{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/bridge.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/bridge.gif') no-repeat center center / cover;
 } 
 .card-5{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cangroo.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/cangroo.gif') no-repeat center center / cover;
 } 
 .card-6{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/giphy.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/giphy.gif') no-repeat center center / cover;
 } 
 .card-7{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/ice.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/ice.gif') no-repeat center center / cover;
 } 
 .card-8{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/kick-chair.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/kick-chair.gif') no-repeat center center / cover;
 } 
 .card-9{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/kick.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/kick.gif') no-repeat center center / cover;
 } 
 .card-10{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/lawn.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/lawn.gif') no-repeat center center / cover;
 } 
 .card-11{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/penguin.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/penguin.gif') no-repeat center center / cover;
 } 
 .card-12{
-	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/rack-fail.gif') no-repeat center center / cover;
+	background:url('http://vast-oasis-8333.herokuapp.com/images/rack-fail.gif') no-repeat center center / cover;
 } 
