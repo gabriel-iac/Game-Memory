@@ -18,18 +18,19 @@ function gameStart(){
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
-		items +=  '<li class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ '<div class=class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '</div>' +'</div>'+ '</li>';
+		items +=  '<li class="flip-container">' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
+		'<div class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '</div>' +'</div>'+ '</li>';
 	}
 
 	$('#board').html(items);
-	$('.card').on('click', turnCard);
+	$('li div.card').on('click', turnCard);
 	console.log(shuffle(cards));
-	player1=[];
-	player2=[];
+	player1=[0];
+	player2=[0];
 }
 //function to turn cards during turn or return the winner.
 function turnCard(){
-	$(this).addClass('active');
+	$(this).addClass('active ');
 	if($('.active').length %2 === 0){
 		getPair();
 	}
