@@ -9,33 +9,30 @@ li{
 .active{
 	background-color: blue;
 }
+
 .p1-pair{
 	background-color: #ff0000;
 }
+
 .p2-pair{
 	background-color: green;
 }
 
-/*Just try some css for flipping cards*/
-
-/* entire container, keeps perspective */
 .flip-container {
 	perspective: 1000;
 }
-	/* flip the pane when hovered */
-	.flip-container:active .flipper, .flip-container.active .flipper {
-		transform: rotateY(180deg);
-		
-	}
-.flip-click{
+
+.flip-container.flipped .flipper {
 	transform: rotateY(180deg);
 }
-.flip-container, .front, .card {
+
+.flip-container, 
+.front, 
+.card {
 	width: 200px;
 	height: 250px;
 	display: inline-block;
 	float: left;
-	
 }
 
 /* flip speed goes here */
@@ -48,7 +45,6 @@ li{
 /* hide back of pane during swap */
 .front, .card {
 	backface-visibility: hidden;
-
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -64,7 +60,6 @@ li{
 
 /* back, initially hidden pane */
 .card {
-	
 	width: 200px;
 	height: 250px;
 	transform: rotateY(180deg);
