@@ -95,8 +95,8 @@ ul li.flip-container.p2-pair{
 .flip-container, 
 .front, 
 .card {
-	width: 160px;
-	height: 224px;
+	width: 150px;
+	height: 210px;
 	display: inline-block;
 	float: left;
 	
@@ -129,8 +129,47 @@ ul li.flip-container.p2-pair{
 
 /* back, initially hidden pane */
 .card {
-	width: 160px;
-	height: 224px;
+	width: 150px;
+	height: 210px;
 	transform: rotateY(180deg);
-	background-color: #f2f2f2;
+	/*background-color: #f2f2f2;*/
 }
+
+
+/*Cards Background*/
+.card-1{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cat.gif') no-repeat center center / cover;
+} 
+.card-2{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cats.gif') no-repeat center center / cover;
+} 
+.card-3{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/200.gif') no-repeat center center/ cover;
+} 
+.card-4{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/bridge.gif') no-repeat center center / cover;
+} 
+.card-5{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/cangroo.gif') no-repeat center center / cover;
+} 
+.card-6{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/giphy.gif') no-repeat center center / cover;
+} 
+.card-7{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/ice.gif') no-repeat center center / cover;
+} 
+.card-8{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/kick-chair.gif') no-repeat center center / cover;
+} 
+.card-9{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/kick.gif') no-repeat center center / cover;
+} 
+.card-10{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/lawn.gif') no-repeat center center / cover;
+} 
+.card-11{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/penguin.gif') no-repeat center center / cover;
+} 
+.card-12{
+	background:url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/images/rack-fail.gif') no-repeat center center / cover;
+} 
