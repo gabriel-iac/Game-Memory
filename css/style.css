@@ -22,12 +22,14 @@ li{
 .flip-container {
 	perspective: 1000;
 }
-	/* flip the pane when hovered 
-	.flip-container:hover .flipper, .flip-container.hover .flipper {
+	/* flip the pane when hovered */
+	.flip-container:active .flipper, .flip-container.active .flipper {
 		transform: rotateY(180deg);
 		
-	}*/
-
+	}
+.flip-click{
+	transform: rotateY(180deg);
+}
 .flip-container, .front, .card {
 	width: 200px;
 	height: 250px;
@@ -40,7 +42,6 @@ li{
 .flipper {
 	transition: 0.6s;
 	transform-style: preserve-3d;
-
 	position: relative;
 }
 
@@ -67,5 +68,5 @@ li{
 	width: 200px;
 	height: 250px;
 	transform: rotateY(180deg);
-	background-color: #000;
+	background-color: #f2f2f2;
 }

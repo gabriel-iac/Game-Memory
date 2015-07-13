@@ -18,19 +18,22 @@ function gameStart(){
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
-		items +=  '<li class="flip-container">' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
-		'<div class="card card-'+ board[i] +'" data-card="card-'+ board[i] +'">' + '</div>' +'</div>'+ '</li>';
+		items +=  '<li class="flip-container" data-card="card-'+ board[i] +'">' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
+		'<div class="card card-'+ board[i] +'" >' + '</div>' +'</div>'+ '</li>';
 	}
 
 	$('#board').html(items);
-	$('li div.card').on('click', turnCard);
+	$('li.flip-container').on('click',function(){
+$('.flipper .front').removeClass('front');
+	}, turnCard);
 	console.log(shuffle(cards));
 	player1=[0];
 	player2=[0];
 }
 //function to turn cards during turn or return the winner.
 function turnCard(){
-	$(this).addClass('active ');
+
+	$(this).addClass('active');
 	if($('.active').length %2 === 0){
 		getPair();
 	}
@@ -57,19 +60,19 @@ function getPair(){
 			player2.length++;
 			$('.p2score').html('player 2' + " " +player2.length);
 			$('.active').addClass('p2-pair').off('click');
-			$('.card').removeClass('active');
+			$('.flip-container').removeClass('active');
 		}
 	}
 	else{
 		alert('match not found')
 		if(turn == true){
-			$('.card').removeClass('active');
+			$('.flip-container').removeClass('active');
 			$('#display').html('Player 1 Turn');
 			turn=false;
 		}
 		else{
 			$('#display').html('Player 2 Turn');
-			$('.card').removeClass('active');
+			$('.flip-container').removeClass('active');
 			turn = true;
 		}
 	}
