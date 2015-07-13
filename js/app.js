@@ -40,11 +40,11 @@ function turnCard(){
 	if($('.active').length %2 === 0){
 		setTimeout(function () {
 		getPair();
-	}, 2000)
+	}, 1000)
 	} else if(player1.length + player2.length === 24){
 		setTimeout(function () {
 		getWinner(); 
-	}, 2000);
+	}, 1000);
 	} else{
 		// alert("turn another card")
 	}
