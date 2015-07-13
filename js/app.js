@@ -52,11 +52,11 @@ function getPair(){
 		if (turn == true) {
 			player1.length++;
 			$('.p1score').html('player 1' + " " +player1.length);
-			// $('.active').addClass('p1-pair').off('click');
+			$('.active').addClass('p1-pair').off('click');
 		} else {
 			player2.length++;
 			$('.p2score').html('player 2' + " " +player2.length);
-			// $('.active').addClass('p2-pair').off('click');
+			$('.active').addClass('p2-pair').off('click');
 		}
 	} else{
 		alert('match not found')
