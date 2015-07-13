@@ -117,7 +117,7 @@ ul li.flip-container.p2-pair{
 	top: 0;
 	left: 0;
 }
-.flip-container:hover, .card:hover{
+.flip-container, .card{
 	cursor: url('http://vast-oasis-8333.herokuapp.com/images/cursor.gif');
 }
 /* front pane, placed above back */
