@@ -59,7 +59,7 @@ function getPair(){
 			$('.active').addClass('p2-pair').off('click');
 		}
 	} else{
-		alert('match not found')
+		// alert('match not found')
 		$('.active').removeClass('flipped');
 		if(turn) {
 			display.html('Player 2 Turn');
