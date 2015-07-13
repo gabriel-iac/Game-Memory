@@ -1,1 +1,1 @@
-<?php include 'game.html'; ?>
+<?php include 'game.html'; ?> 

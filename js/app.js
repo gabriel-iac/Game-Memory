@@ -40,7 +40,7 @@ function turnCard(){
 	if($('.active').length %2 === 0){
 		getPair();
 	} else if(player1.length + player2.length === 24){
-		getWinner();
+		getWinner(); 
 	} else{
 		// alert("turn another card")
 	}
@@ -59,8 +59,8 @@ function getPair(){
 			$('.active').addClass('p2-pair').off('click');
 		}
 	} else{
-		 alert('match not found')
-		
+		// alert('match not found')
+		$('.active').removeClass('flipped');
 		if(turn) {
 			display.html('Player 2 Turn');
 			turn = false;
@@ -68,7 +68,6 @@ function getPair(){
 			display.html('Player 1 Turn');
 			turn = true;
 		}
-		$('.active').removeClass('flipped');
 	}
 	$('.flip-container').removeClass('active');
 }
