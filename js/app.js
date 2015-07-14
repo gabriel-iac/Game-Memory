@@ -42,7 +42,7 @@ function turnCard(){
 		setTimeout(function () {
 			getPair();
 		}, 1000)
-	} else if($('.flipped')) === 24){
+	} else if($('.flipped') === 24){
 		setTimeout(function () {
 			getWinner(); 
 		}, 1000);
