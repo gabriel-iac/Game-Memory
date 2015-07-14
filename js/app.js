@@ -29,15 +29,18 @@ function gameStart(){
 	$('.p1score').html("");
 	player1=[];
 	player2=[];
+$('#board').html("");
+	$(items).each(function(index, item){
+		setTimeout(function(){
 
-	// $(items).each(function(index, item){
-	// 	setTimeout(function(){
-	// 		$('#board').append(item).removeClass ;
-	// 	}, 300*index);	
-	// 	;
+			$('#board').append(item) ;
+		}, 300*index);	
 		
-	// });
-	$('#board').html(items);
+		
+	});
+	$('.flip-container').removeClass('animated bounceInUp');
+	
+	// $('#board').html(items);
 	$('li.flip-container').removeClass('animated bounceInLeft')
 	$('li.flip-container').on('click', turnCard);
 
