@@ -19,10 +19,13 @@ body{
 .scoreboard{
 opacity: 0.8;
 	position: fixed;
-	width: 100%;
 	 top: 0;
 		  z-index: 3;   
-	width: 100%;
+	width: 960px;
+	height: auto;
+	overflow: hidden;
+	background: url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/blackboard.jpg') no-repeat center top / cover;
+
 
 }
 .centered{
