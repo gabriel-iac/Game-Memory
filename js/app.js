@@ -37,7 +37,7 @@ function gameStart(){
 	// 	$('.flip-container').removeClass('animated bounceInLeft');
 		
 	// });
-	$('#board').html(items);
+	// $('#board').html(items);
 	$('li.flip-container').removeClass('animated bounceInLeft')
 	$('li.flip-container').on('click', turnCard);
 
