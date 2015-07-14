@@ -22,7 +22,7 @@ function gameStart(){
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
-		items +=  '<li class="flip-container animated bounceInUp" data-card="card-'+ board[i] +'" >' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
+		items +=  '<li class="flip-container animated bounceInUp hvr-bob" data-card="card-'+ board[i] +'" >' + '<div class="flipper">' + '<div class="front">' +'</div>'+ 
 		'<div class="card card-'+ board[i] +'" >' + '</div>' +'</div>'+ '</li>';
 	}
 	$('.p2score').html("");
@@ -38,7 +38,9 @@ function gameStart(){
 		
 	// });
 	$('#board').html(items);
+	$('li.flip-container').removeClass('animated bounceInLeft')
 	$('li.flip-container').on('click', turnCard);
+
 	
 }
 //function to turn cards during turn or return the winner.
