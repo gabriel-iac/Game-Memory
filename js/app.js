@@ -16,7 +16,7 @@ function shuffle(hand) {
 
 //function to shuffle cards and create the board
 function gameStart(){
-	
+	turn = true;
 	display = $('#display');
 	display.removeClass('p2Turn').addClass('p1Turn').html('Player 1 Turn');
 	var board = shuffle(cards);
@@ -46,9 +46,10 @@ function turnCard(){
 	// The class of active is used to compare the two cards...
 	$(this).addClass('active flipped');
 
-	if($('.active').length %2 === 0){
-		setTimeout(function () {
-			if(player1.length + player2.length === 12){
+	if($('.active').length % 2 === 0){
+		setTimeout(function() {
+			if(player1.length + player2.length == 11){
+			
 						getWinner(); 
 				}
 				else{
@@ -71,7 +72,7 @@ function getPair(){
 			setTimeout(function () {
 				$('.p1score h2').removeClass('animated flip')
 			}, 1000);
-			$(this).on()
+			
 		} else {
 			player2.length++;
 			$('.p2score').html("<p class='score'>" +'player 2 pairs found' + "</p>" + " " + '<h2>' + player2.length + '</h2>');
@@ -101,6 +102,7 @@ function getPair(){
 }
 //compare the arrays of the player to see who win
 function getWinner(){
+	
 	if (player1.length > player2.length){
 		display.html("Player 1 Wins")
 	}
