@@ -26,7 +26,7 @@ body{
 	height: 100px;
 	overflow: hidden;
 	background: url('http://vast-oasis-8333.herokuapp.com/images/blackboard.jpg') no-repeat center top / cover;
-	border-radius: 0px 0px 5px 5px;
+	/*border-radius: 0px 0px 5px 5px;*/
 
 }
 .centered{
@@ -70,40 +70,40 @@ body{
 	font-size: 45px;
 }
 .board-content{
-	margin-top: 100px;
+	
 	float: left;
 	width: 100%;
 	height: auto;
 	background: url('../images/wood.jpg') repeat center center;
 	border-radius: 5px;
-	
+	margin: 100px auto;
 }
 
 /*TRYING SOME CSS*/
 
-.effect7
+.effect8
 {
   	position:relative;       
     -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
        -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
             box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
 }
-.effect7:before, .effect7:after
+.effect8:before, .effect8:after
 {
 	content:"";
     position:absolute; 
     z-index:-1;
-    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
-    box-shadow:0 0 20px rgba(0,0,0,0.8);
-    top:0;
-    bottom:0;
-    left:10px;
-    right:10px;
+    -webkit-box-shadow:0 0 25px rgba(0,0,0,0.9);
+    -moz-box-shadow:0 0 25px rgba(0,0,0,0.9);
+    box-shadow:0 0 25px rgba(0,0,0,0.9);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
     -moz-border-radius:100px / 10px;
     border-radius:100px / 10px;
 } 
-.effect7:after
+.effect8:after
 {
 	right:10px; 
     left:auto;
@@ -113,8 +113,6 @@ body{
          -o-transform:skew(8deg) rotate(3deg); 
             transform:skew(8deg) rotate(3deg);
 }
-
-
 /*END OF CSS TEST*/
 
 
@@ -173,6 +171,7 @@ ul li.flip-container.p2-pair{
 	transition: 0.6s;
 	transform-style: preserve-3d;
 	position: relative;
+	background: transparent;
 }
 
 /* hide back of pane during swap */
@@ -182,8 +181,8 @@ ul li.flip-container.p2-pair{
 	top: 0;
 	left: 0;
 }
-.flip-container, .card{
-	cursor: url('http://vast-oasis-8333.herokuapp.com/images/cursor.gif'), pointer;
+.board-content, .card{
+	cursor: url('../images/cursor.gif'), pointer;
 }
 /* front pane, placed above back */
 .front {
@@ -191,6 +190,7 @@ ul li.flip-container.p2-pair{
 	background:url('http://vast-oasis-8333.herokuapp.com/images/card.png') no-repeat 0 0 / cover;
 	/* for firefox 31 */
 	transform: rotateY(0deg);
+	color: #f2f2f2;
 	
 }
 
@@ -200,6 +200,7 @@ ul li.flip-container.p2-pair{
 	height: 210px;
 	transform: rotateY(180deg);
 	/*background-color: #f2f2f2;*/
+
 }
 
 

@@ -25,13 +25,13 @@ function gameStart(){
 		items +=  '<li class="flip-container" data-card="card-'+ board[i] +'" >' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
 		'<div class="card card-'+ board[i] +'" >' + '</div>' +'</div>'+ '</li>';
 	}
-
-	$('#board').html(items);
-	$('li.flip-container').on('click', turnCard);
 	$('.p2score').html("");
 	$('.p1score').html("");
 	player1=[];
 	player2=[];
+	$('#board').html(items);
+	$('li.flip-container').on('click', turnCard);
+	
 }
 //function to turn cards during turn or return the winner.
 function turnCard(){
@@ -42,7 +42,7 @@ function turnCard(){
 		setTimeout(function () {
 			getPair();
 		}, 1000)
-	} else if(player1.length + player2.length === 24){
+	} else if($('.flipped')) === 24){
 		setTimeout(function () {
 			getWinner(); 
 		}, 1000);
@@ -91,13 +91,13 @@ function getPair(){
 //compare the arrays of the player to see who win
 function getWinner(){
 	if (player1.length > player2.length){
-		$('#display').html("player1 Wins")
+		display.html("player1 Wins")
 	}
 	else if(player1.length == player2.length){
-		$('#display').html("it's a tie");
+		display.html("it's a tie");
 	}
 	else{
-		$('#display').html("player 2 wins");
+		display.html("player 2 wins");
 	}
 }
 
