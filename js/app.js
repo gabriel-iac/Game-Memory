@@ -22,13 +22,21 @@ function gameStart(){
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
-		items +=  '<li class="flip-container" data-card="card-'+ board[i] +'" >' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
+		items +=  '<li class="flip-container animated bounceInUp" data-card="card-'+ board[i] +'" >' + '<div class="flipper">' + '<div class="front">' + board[i] +'</div>'+ 
 		'<div class="card card-'+ board[i] +'" >' + '</div>' +'</div>'+ '</li>';
 	}
 	$('.p2score').html("");
 	$('.p1score').html("");
 	player1=[];
 	player2=[];
+
+	// $(items).each(function(index, item){
+	// 	setTimeout(function(){
+	// 		$('#board').append(item);
+	// 	}, 300*index);	
+	// 	$('.flip-container').removeClass('animated bounceInLeft');
+		
+	// });
 	$('#board').html(items);
 	$('li.flip-container').on('click', turnCard);
 	
@@ -40,16 +48,14 @@ function turnCard(){
 
 	if($('.active').length %2 === 0){
 		setTimeout(function () {
-			getPair();
+			if(player1.length + player2.length == 12){
+						getWinner(); 
+				}
+				getPair();
 		}, 1000)
-	} else if($('.flipped') === 24){
-		setTimeout(function () {
-			getWinner(); 
-		}, 1000);
-	} else{
-		// alert("turn another card")
-	}
-}
+	}  
+	} 
+
 
 function getPair(){
 	if($('.active:eq(0)').attr('data-card') == $('.active:eq(1)').attr('data-card')){
@@ -62,6 +68,7 @@ function getPair(){
 			setTimeout(function () {
 				$('.p1score h2').removeClass('animated flip')
 			}, 1000);
+			$(this).on()
 		} else {
 			player2.length++;
 			$('.p2score').html("<p class='score'>" +'player 2 pairs found' + "</p>" + " " + '<h2>' + player2.length + '</h2>');

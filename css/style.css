@@ -1,6 +1,11 @@
-@import url(http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise);
-
-
+/*@import url(https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise);
+// $(items).each(function(index, item){
+// 	setTimeout(function(){
+// 		$('#board').append(item);
+// 	}, 300*index);	
+// 	$('.flip-container').removeClass('animated bounceInLeft');
+// });
+*/
 ul{
 	list-style: none;
 
@@ -15,7 +20,7 @@ li{
 	margin: 0 auto;
 }
 body{
-	
+cursor: pointer;
 }
 .scoreboard{
 	opacity: 0.8;
@@ -70,13 +75,15 @@ body{
 	font-size: 45px;
 }
 .board-content{
-	
+	border:2px solid #brown;
 	float: left;
 	width: 100%;
-	height: auto;
+	height: 920px;
 	background: url('../images/wood.jpg') repeat center center;
-	border-radius: 5px;
-	margin: 100px auto;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+	margin: 99px auto;
+	cursor: pointer;
 }
 
 /*TRYING SOME CSS*/
@@ -120,7 +127,6 @@ body{
 	text-align: center;;
 }
 .active{
-	background-color: #f2f2f2;
 	-webkit-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
 	box-shadow: 0px 0px 9px 0px rgba(0,0,0,0.75);
@@ -181,8 +187,8 @@ ul li.flip-container.p2-pair{
 	top: 0;
 	left: 0;
 }
-.board-content, .card{
-	cursor: url('../images/cursor.gif'), pointer;
+.board-content, .card, .scoreboard{
+	/*cursor: url('../images/hand.gif'), pointer;*/
 }
 /* front pane, placed above back */
 .front {
@@ -199,9 +205,51 @@ ul li.flip-container.p2-pair{
 	width: 150px;
 	height: 210px;
 	transform: rotateY(180deg);
-	/*background-color: #f2f2f2;*/
-
+	display: block;
+	background: transparent;
 }
+
+#newGame {
+	-moz-box-shadow: 0px 1px 0px 0px #9fb4f2;
+	-webkit-box-shadow: 0px 1px 0px 0px #9fb4f2;
+	box-shadow: 0px 1px 0px 0px #9fb4f2;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #7892c2), color-stop(1, #476e9e));
+	background:-moz-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-webkit-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-o-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:-ms-linear-gradient(top, #7892c2 5%, #476e9e 100%);
+	background:linear-gradient(to bottom, #7892c2 5%, #476e9e 100%);
+	
+	background-color:#7892c2;
+	-moz-border-radius:6px;
+	-webkit-border-radius:6px;
+	border-radius:6px;
+	border:1px solid #4e6096;
+	display:inline-block;
+	cursor: pointer;
+	color:#ffffff;
+	font-size:15px;
+	font-weight:bold;
+	padding:9px 61px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #283966;
+	margin: 10px 0;
+}
+#newGame:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #476e9e), color-stop(1, #7892c2));
+	background:-moz-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-webkit-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-o-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:-ms-linear-gradient(top, #476e9e 5%, #7892c2 100%);
+	background:linear-gradient(to bottom, #476e9e 5%, #7892c2 100%);
+	
+	background-color:#476e9e;
+}
+#newGame:active {
+	position:relative;
+	top:1px;
+}
+
 
 
 /*Cards Background*/
