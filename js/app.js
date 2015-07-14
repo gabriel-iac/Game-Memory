@@ -48,10 +48,13 @@ function turnCard(){
 
 	if($('.active').length %2 === 0){
 		setTimeout(function () {
-			if(player1.length + player2.length == 12){
+			if(player1.length + player2.length === 12){
 						getWinner(); 
 				}
-				getPair();
+				else{
+					getPair();
+				}
+				
 		}, 1000)
 	}  
 	} 
@@ -77,6 +80,7 @@ function getPair(){
 			setTimeout(function () {
 				$('.p2score h2').removeClass('animated flip')
 			}, 1000);
+
 		}
 	} else{
 		// alert('match not found')
@@ -98,13 +102,13 @@ function getPair(){
 //compare the arrays of the player to see who win
 function getWinner(){
 	if (player1.length > player2.length){
-		display.html("player1 Wins")
+		display.html("Player 1 Wins")
 	}
 	else if(player1.length == player2.length){
 		display.html("it's a tie");
 	}
 	else{
-		display.html("player 2 wins");
+		display.html("Player 2 Wins");
 	}
 }
 
