@@ -1,3 +1,8 @@
+@font-face {
+    font-family: myFont;
+    src: url('http://vast-oasis-8333.herokuapp.com/font/DK Crayon Crumble.ttf');
+}
+
 ul{
 	list-style: none;
 
@@ -12,46 +17,43 @@ li{
 	margin: 0 auto;
 }
 body{
-	
+	font-
 }
-
-
 .scoreboard{
-opacity: 0.8;
+	opacity: 0.8;
 	position: fixed;
-	 top: 0;
-		  z-index: 3;   
+	top: 0;
+	z-index: 3;   
 	width: 960px;
-	height: auto;
+	height: 100px;
 	overflow: hidden;
 	background: url('http://vast-oasis-8333.herokuapp.com/images/blackboard.jpg') no-repeat center top / cover;
-
+	border-radius: 0px 0px 5px 5px;
 
 }
 .centered{
 	margin-left: auto;
-	  margin-right: auto;
-	  position: relative;
-	 
-	  text-align: center;
+	margin-right: auto;
+	position: relative;
+	text-align: center;
 
 }
 #display{
 	float: left;
 	width: 420px;
 	height: 100px;
-	background-color: brown;
+	/*background-color: brown;*/
 }
 .p1score {
 	float: left;
 	width: 270px;
-	background-color: red;
+	/*background-color: red;*/
 	height: 100px;
 }
 .p2score{
 	float: left;
 	width: 270px;
-	background-color: green;
+	/*background-color: green;*/
 	height: 100px;
 }
 .board-content{
