@@ -1,8 +1,4 @@
-@font-face {
-
-    font-family: "regularchalk";
-    src:url('http://vast-oasis-8333.herokuapp.com/font/DK-Crayon-Crumble.ttf') format("ttf") ;
-}
+@import url(http://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise);
 
 
 ul{
@@ -45,14 +41,17 @@ body{
 	width: 420px;
 	height: 100px;
 	/*background-color: brown;*/
-	font-family: "regularchalk";
+	font-family: 'Waiting for the Sunrise', cursive;
+	font-size: 50px;
+	margin-top:10px;
+	color: #f2f2f2;
 }
 .p1score {
 	float: left;
 	width: 270px;
 	/*background-color: red;*/
 	height: 100px;
-	font-family: "regularchalk";
+	font-family: 'Waiting for the Sunrise', cursive;
 	color: #f2f2f2;
 }
 .p2score{
@@ -60,16 +59,65 @@ body{
 	width: 270px;
 	/*background-color: green;*/
 	height: 100px;
-	font-family: "regularchalk";
+	font-family: 'Waiting for the Sunrise', cursive;
 	color: #f2f2f2;
+}
+.score{
+	font-size: 35px;
+	  margin-top: 10px;
+}
+.scoreboard h2{
+	font-size: 45px;
 }
 .board-content{
 	margin-top: 100px;
 	float: left;
 	width: 100%;
 	height: auto;
+	background: url('../images/wood.jpg') repeat center center;
+	border-radius: 5px;
 	
 }
+
+/*TRYING SOME CSS*/
+
+.effect7
+{
+  	position:relative;       
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect7:before, .effect7:after
+{
+	content:"";
+    position:absolute; 
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:0;
+    bottom:0;
+    left:10px;
+    right:10px;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+} 
+.effect7:after
+{
+	right:10px; 
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg); 
+       -moz-transform:skew(8deg) rotate(3deg);     
+        -ms-transform:skew(8deg) rotate(3deg);     
+         -o-transform:skew(8deg) rotate(3deg); 
+            transform:skew(8deg) rotate(3deg);
+}
+
+
+/*END OF CSS TEST*/
+
+
 .board-wrapper{
 	text-align: center;;
 }
@@ -86,7 +134,12 @@ ul li.flip-container.p1-pair{
 	-moz-box-shadow: 0px 0px 9px 0px rgba(47,36,201,1);
 	box-shadow: 0px 0px 9px 0px rgba(47,36,201,1);
 }
-
+.p1Turn{
+	text-shadow: 0px 0px 9px rgba(47,36,201,1);
+}
+.p2Turn{
+	text-shadow: 0px 0px 9px rgba(204,51,51,1);
+}
 ul li.flip-container.p2-pair{
 	z-index: 3;
 	-webkit-box-shadow: 0px 0px 9px 0px rgba(204,51,51,1);

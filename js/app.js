@@ -16,9 +16,9 @@ function shuffle(hand) {
 
 //function to shuffle cards and create the board
 function gameStart(){
+	
 	display = $('#display');
-	display.html('Player 1 Turn');
-
+	display.removeClass('p2Turn').addClass('p1Turn').html('Player 1 Turn');
 	var board = shuffle(cards);
 	var items = "";
 	for(var i = 0; i<board.length; i++){
@@ -28,7 +28,8 @@ function gameStart(){
 
 	$('#board').html(items);
 	$('li.flip-container').on('click', turnCard);
-
+	$('.p2score').html("");
+	$('.p1score').html("");
 	player1=[];
 	player2=[];
 }
@@ -39,12 +40,12 @@ function turnCard(){
 
 	if($('.active').length %2 === 0){
 		setTimeout(function () {
-		getPair();
-	}, 1000)
+			getPair();
+		}, 1000)
 	} else if(player1.length + player2.length === 24){
 		setTimeout(function () {
-		getWinner(); 
-	}, 1000);
+			getWinner(); 
+		}, 1000);
 	} else{
 		// alert("turn another card")
 	}
@@ -56,22 +57,34 @@ function getPair(){
 		if (turn == true) {
 			player1.length++;
 			$('.p1score').html("<p class='score'>" + 'Player 1 pairs found' + "</p>" + " " +'<h2>' + player1.length + '</h2>');
+			$('.p1score h2').addClass('animated flip');
 			$('.active').addClass('p1-pair').off('click');
+			setTimeout(function () {
+				$('.p1score h2').removeClass('animated flip')
+			}, 1000);
 		} else {
 			player2.length++;
 			$('.p2score').html("<p class='score'>" +'player 2 pairs found' + "</p>" + " " + '<h2>' + player2.length + '</h2>');
+			$('.p2score h2').addClass('animated flip');
 			$('.active').addClass('p2-pair').off('click');
+			setTimeout(function () {
+				$('.p2score h2').removeClass('animated flip')
+			}, 1000);
 		}
 	} else{
 		// alert('match not found')
 		$('.active').removeClass('flipped');
 		if(turn) {
-			display.html('Player 2 Turn');
+			display.removeClass('p1Turn').addClass('p2Turn animated zoomIn').html('Player 2 Turn');
 			turn = false;
 		} else {
-			display.html('Player 1 Turn');
+
+			display.removeClass('p2Turn').addClass('p1Turn animated zoomIn').html('Player 1 Turn');
 			turn = true;
 		}
+		setTimeout(function(){
+			display.removeClass('animated zoomIn')
+		}, 1000)
 	}
 	$('.flip-container').removeClass('active');
 }
