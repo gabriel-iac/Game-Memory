@@ -24,7 +24,7 @@ opacity: 0.8;
 	width: 960px;
 	height: auto;
 	overflow: hidden;
-	background: url('file:///Users/gabrieleiacopetti/Desktop/WDI/Development/WDI-Project-Game/blackboard.jpg') no-repeat center top / cover;
+	background: url('http://vast-oasis-8333.herokuapp.com/images/blackboard.jpg') no-repeat center top / cover;
 
 
 }
