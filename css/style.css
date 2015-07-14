@@ -30,7 +30,7 @@ cursor: pointer;
 	width: 960px;
 	height: 100px;
 	overflow: hidden;
-	background: url('http://vast-oasis-8333.herokuapp.com/images/blackboard.jpg') no-repeat center top / cover;
+	background: url('../images/blackboard.jpg') no-repeat center top / cover;
 	/*border-radius: 0px 0px 5px 5px;*/
 
 }
@@ -75,7 +75,7 @@ cursor: pointer;
 	font-size: 45px;
 }
 .board-content{
-	border:2px solid #brown;
+	/*border:2px solid #brown;*/
 	float: left;
 	width: 100%;
 	height: 950px;

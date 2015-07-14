@@ -32,12 +32,12 @@ function gameStart(){
 
 	// $(items).each(function(index, item){
 	// 	setTimeout(function(){
-	// 		$('#board').append(item);
+	// 		$('#board').append(item).removeClass ;
 	// 	}, 300*index);	
-	// 	$('.flip-container').removeClass('animated bounceInLeft');
+	// 	;
 		
 	// });
-	// $('#board').html(items);
+	$('#board').html(items);
 	$('li.flip-container').removeClass('animated bounceInLeft')
 	$('li.flip-container').on('click', turnCard);
 
