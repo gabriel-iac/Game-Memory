@@ -13,7 +13,7 @@ function shuffle(hand) {
 	}
 	return hand;
 }
-
+var timer;
 //function to shuffle cards and create the board
 function gameStart(){
 	turn = true;
@@ -29,18 +29,17 @@ function gameStart(){
 	$('.p1score').html("");
 	player1=[];
 	player2=[];
-$('#board').html("");
-	$(items).each(function(index, item){
-		setTimeout(function(){
+	// clearTimeout(timer);
+	// $('#board').html("");
+	// $(items).each(function(index, item){
+	// 	timer = setTimeout(function(){
 
-			$('#board').append(item) ;
-		}, 300*index);	
-		
-		
-	});
+	// 		$('#board').append(item) ;
+	// 	}, 300*index);			
+	// })
 	$('.flip-container').removeClass('animated bounceInUp');
 	
-	// $('#board').html(items);
+	$('#board').html(items);
 	$('li.flip-container').removeClass('animated bounceInLeft')
 	$('li.flip-container').on('click', turnCard);
 
@@ -54,16 +53,16 @@ function turnCard(){
 	if($('.active').length % 2 === 0){
 		setTimeout(function() {
 			if(player1.length + player2.length == 11){
-			
-						getWinner(); 
-				}
-				else{
-					getPair();
-				}
 				
+				getWinner(); 
+			}
+			else{
+				getPair();
+			}
+			
 		}, 1000)
 	}  
-	} 
+} 
 
 
 function getPair(){
