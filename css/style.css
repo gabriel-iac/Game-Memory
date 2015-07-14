@@ -1,7 +1,9 @@
 @font-face {
-    font-family: myFont;
-    src: url('http://vast-oasis-8333.herokuapp.com/font/DK Crayon Crumble.ttf');
+
+    font-family: "regularchalk";
+    src:url('http://vast-oasis-8333.herokuapp.com/font/DK-Crayon-Crumble.ttf') format("ttf") ;
 }
+
 
 ul{
 	list-style: none;
@@ -17,7 +19,7 @@ li{
 	margin: 0 auto;
 }
 body{
-	font-
+	
 }
 .scoreboard{
 	opacity: 0.8;
@@ -43,18 +45,23 @@ body{
 	width: 420px;
 	height: 100px;
 	/*background-color: brown;*/
+	font-family: "regularchalk";
 }
 .p1score {
 	float: left;
 	width: 270px;
 	/*background-color: red;*/
 	height: 100px;
+	font-family: "regularchalk";
+	color: #f2f2f2;
 }
 .p2score{
 	float: left;
 	width: 270px;
 	/*background-color: green;*/
 	height: 100px;
+	font-family: "regularchalk";
+	color: #f2f2f2;
 }
 .board-content{
 	margin-top: 100px;
